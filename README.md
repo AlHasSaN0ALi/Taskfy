@@ -1,3 +1,14 @@
+🌟 Overview
+The Task Management System is a web-based application designed to help users manage their daily tasks efficiently. With features such as task creation, editing, deletion, and filtering, this system is perfect for improving productivity and staying organized.
+
+🚀 Features
+🔒 User Registration & Login: Secure user authentication with JWT.
+📝 Task Creation: Add tasks with a title, description, and priority.
+✏️ Task Editing: Modify existing tasks.
+🗑️ Task Deletion: Remove tasks from the list.
+🔍 Task Filtering: Filter tasks by priority, status, or due date.
+🔎 Task Search: Search tasks by title or keyword.
+👤 Profile Management: Update user profile information.
 💻 Technologies Used
 Frontend
 ⚛️ Next.js: React-based framework for frontend rendering.
@@ -158,3 +169,5 @@ Prisma ORM Integration: Ensuring smooth schema management and complex queries.
 🤝 Task Sharing: Assign tasks to other users for collaboration.
 📱 Mobile App: Build a mobile version using React Native or Flutter.
 🏷️ Advanced Filtering: Add custom tags and improved task sorting options.
+🏁 Conclusion
+The Task Management System is a comprehensive solution for managing tasks efficiently. Built using modern web technologies like Next.js, Express.js, MongoDB, and Prisma ORM, this system is designed to enhance productivity and organization
