@@ -15,13 +15,7 @@ function Profile() {
         onClick={openProfileModal}
       >
         <div>
-          <Image
-            src={user?.photo}
-            alt="avatar"
-            width={70}
-            height={70}
-            className="rounded-full"
-          />
+          
         </div>
         <div>
           <h1 className="flex flex-col text-xl">
