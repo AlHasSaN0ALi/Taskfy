@@ -1,100 +1,126 @@
-** Task Management System**
-
-** Features**
-
-** Secure User Authentication:** JWT-based authentication ensures user privacy and data security.
-** Task Management:**
-Create tasks with clear titles, descriptions, and priority levels.
-Edit existing tasks to keep them up-to-date.
-Delete tasks you've completed.
-** Powerful Search & Filtering:**
-Find specific tasks using title or keyword search.
-Filter tasks by priority, status, or due date for better organization.
-** User Profile Management:** Keep your profile information current.
-** Technologies Used**
-
+💻 Technologies Used
 Frontend
-
-⚛️ Next.js: A React-based framework for efficient frontend rendering.
-** Tailwind CSS:** Provides rapid styling and responsive design.
-** React Hooks:** Manages state using useState and side effects with useEffect for smooth UI interactions.
-** Axios:** Handles HTTP requests to the backend API.
+⚛️ Next.js: React-based framework for frontend rendering.
+🎨 Tailwind CSS: For styling and responsive design.
+🔄 React Hooks: State management using useState and side effects with useEffect.
+📡 Axios: To make HTTP requests to the backend.
 Backend
-
-️ Express.js: A Node.js framework for robust backend routing and API development.
-** TypeScript:** Enhances code quality and maintainability with strict typing.
-** Prisma ORM:** Simplifies MongoDB database interactions.
-️ JWT: JSON Web Tokens provide secure authentication and authorization.
+🛠️ Express.js: Node.js framework for backend routing and APIs.
+🔐 TypeScript: For strict typing and better code quality.
+📊 Prisma ORM: For MongoDB database management.
+🛡️ JWT: JSON Web Tokens for authentication and authorization.
 Database
-
-️ MongoDB: A NoSQL database for flexible storage of user data and tasks.
+🗄️ MongoDB: For storing user data and tasks.
 ⚙️ Installation
+Prerequisites
+Ensure you have the following installed:
 
-Prerequisites:
-
-Node.js (v14 or later)
-MongoDB
-npm (Node Package Manager)
-Steps:
-
+🟢 Node.js (v14 or later)
+🟢 MongoDB
+🟢 npm (Node Package Manager)
+Steps to Install
 Clone the repository:
 
-Bash
+bash
+Copy code
 git clone https://github.com/your-repo/task-management-system.git
 cd task-management-system
-Use code with caution.
-
 Install dependencies:
 
-Bash
+bash
+Copy code
 npm install
-Use code with caution.
+Set up environment variables: Create a .env file in the root directory and add the following:
 
-Set up environment variables:
-
-Create a .env file in the root directory and add:
-
+bash
+Copy code
 PORT=8000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 Start the development server:
 
-Bash
+bash
+Copy code
 npm run dev
-Use code with caution.
+Open your browser and navigate to http://localhost:3000.
 
-Access the application:
-
-Open http://localhost:3000 in your browser.
-
-** API Documentation**
-
+📄 API Documentation
 Authentication
+POST /auth/register
+Register a new user.
+Request Body:
 
-POST /auth/register: Register a new user with name, email, and password.
-POST /auth/login: Login using email and password to receive a JWT token.
+json
+Copy code
+{
+  "name": "John Doe",
+  "email": "john@example.com",
+  "password": "yourpassword"
+}
+POST /auth/login
+Login and receive a JWT token.
+Request Body:
+
+json
+Copy code
+{
+  "email": "john@example.com",
+  "password": "yourpassword"
+}
 Tasks
+GET /tasks
+Fetch all tasks for the authenticated user.
 
-GET /tasks: Retrieve all tasks for the authenticated user.
-POST /task/create: Create a new task with title, description, and priority.
-PATCH /task/:id: Update an existing task by its ID.
-DELETE /task/:id: Delete a task by its ID.
+POST /task/create
+Create a new task.
+Request Body:
+
+json
+Copy code
+{
+  "title": "Task Title",
+  "description": "Task Description",
+  "priority": "high"
+}
+PATCH /task/
+
+Update a task by ID.
+Request Body:
+
+json
+Copy code
+{
+  "title": "Updated Task Title",
+  "description": "Updated Description",
+  "priority": "medium"
+}
+DELETE /task/
+
+Delete a task by ID.
+
 Profile
+GET /profile
+Get the authenticated user's profile information.
 
-GET /profile: Get the authenticated user's profile information.
-PATCH /profile: Update the user's profile details.
-️ System Design
+PATCH /profile
+Update the user's profile.
+Request Body:
 
+json
+Copy code
+{
+  "name": "Updated Name",
+  "email": "updatedemail@example.com"
+}
+🛠️ System Design
 Architecture
-
-Frontend: Built with Next.js and utilizes Axios for HTTP requests.
-Backend: Express.js (TypeScript) handles authentication and task management through REST APIs.
-Database: MongoDB with Prisma ORM as the data layer.
+Frontend: Built using Next.js with Axios for HTTP requests.
+Backend: Express.js (TypeScript) REST API handling authentication and task management.
+Database: MongoDB with Prisma ORM.
 Database Schema
-
 User Collection
-
-JSON
+json
+Copy code
 {
   "_id": "ObjectId",
   "name": "string",
@@ -103,11 +129,9 @@ JSON
   "createdAt": "Date",
   "updatedAt": "Date"
 }
-Use code with caution.
-
 Task Collection
-
-JSON
+json
+Copy code
 {
   "_id": "ObjectId",
   "title": "string",
@@ -118,15 +142,19 @@ JSON
   "createdAt": "Date",
   "updatedAt": "Date"
 }
-Use code with caution.
+🔧 Testing
+Manual Testing:
+Tested using Postman for API endpoint validation.
 
-** Testing**
+Frontend Testing:
+Verified task creation, editing, and deletion using a browser for manual UI testing.
 
-Manual Testing: Validated API endpoints using Postman.
-Frontend Testing: Verified task creation, editing, and deletion using browser UI testing.
-** Challenges Faced**
-
-JWT Implementation: Managing token expiry and user session control effectively.
-Efficient MongoDB Queries: Optimized task filtering and sorting for improved performance.
-Prisma ORM Integration: Ensured smooth schema management and efficient handling of complex queries.
-** Future Enhancements**
+🧠 Challenges Faced
+JWT Implementation: Managing token expiry and user session control.
+Efficient MongoDB Queries: Optimizing task filtering and sorting.
+Prisma ORM Integration: Ensuring smooth schema management and complex queries.
+🔮 Future Enhancements
+🔔 Notifications: Push notifications for upcoming tasks or deadlines.
+🤝 Task Sharing: Assign tasks to other users for collaboration.
+📱 Mobile App: Build a mobile version using React Native or Flutter.
+🏷️ Advanced Filtering: Add custom tags and improved task sorting options.
