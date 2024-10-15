@@ -3,12 +3,19 @@ The Task Management System is a web-based application designed to help users man
 
 🚀 Features
 🔒 User Registration & Login: Secure user authentication with JWT.
+
 📝 Task Creation: Add tasks with a title, description, and priority.
+
 ✏️ Task Editing: Modify existing tasks.
+
 🗑️ Task Deletion: Remove tasks from the list.
+
 🔍 Task Filtering: Filter tasks by priority, status, or due date.
+
 🔎 Task Search: Search tasks by title or keyword.
+
 👤 Profile Management: Update user profile information.
+
 💻 Technologies Used
 Frontend
 ⚛️ Next.js: React-based framework for frontend rendering.
