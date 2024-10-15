@@ -1,4 +1,3 @@
-
 import React from "react";
 
 function IconCheck({ strokeColor = "black" }: { strokeColor?: string }) {

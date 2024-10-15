@@ -1,5 +1,4 @@
 "use client";
-
 import { TrendingUp } from "lucide-react";
 import { Label, PolarRadiusAxis, RadialBar, RadialBarChart } from "recharts";
 
@@ -10,13 +9,13 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/app/Components/ui/card";
+} from "@/components/ui/card";
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/app/Components/ui/chart";
+} from "@/components/ui/chart";
 import { useTasks } from "@/context/taskContext";
 
 export const description = "A radial chart with stacked sections";

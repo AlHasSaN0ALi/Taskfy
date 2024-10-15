@@ -59,7 +59,7 @@
 }
 
 body {
-  background-color: #e5d0f8;
+  background-color: #d483ff;
   height: 100vh;
   position: relative;
 }
@@ -99,6 +99,6 @@ body {
   height: 0;
   border-top: 5px solid transparent;
   border-bottom: 5px solid transparent;
-  border-right: 8px solid #0749e2;
+  border-right: 8px solid #3aafae;
   transform: translateY(-50%);
 }

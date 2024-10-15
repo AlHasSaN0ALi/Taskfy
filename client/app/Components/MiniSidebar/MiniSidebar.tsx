@@ -14,7 +14,7 @@ function MiniSidebar() {
   const pathname = usePathname();
 
   const getStrokeColor = (link: string) => {
-    return pathname === link ? "#00000" : "#000000";
+    return pathname === link ? "#000000" : "#71717a";
   };
 
   const navItems = [
@@ -40,7 +40,7 @@ function MiniSidebar() {
     },
   ];
   return (
-    <div className="basis-[5rem] flex flex-col bg-[#af8cfa]">
+    <div className="basis-[5rem] flex flex-col bg-[#e3bdff]">
       <div className="flex items-center justify-center h-[5rem]">
         <Image src="/logo.png" width={28} height={28} alt="logo" />
       </div>
@@ -52,7 +52,7 @@ function MiniSidebar() {
               <Link href={item.link}>{item.icon}</Link>
 
               {/* Hover Tooltip */}
-              <span className="u-triangle absolute top-[50%] translate-y-[-50%] left-8 text-xs pointer-events-none text-white bg-[#5d207e] px-2 py-1 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="u-triangle absolute top-[50%] translate-y-[-50%] left-8 text-xs pointer-events-none text-white bg-[#000000] px-2 py-1 rounded-md shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 {item.title}
               </span>
             </li>
@@ -60,8 +60,8 @@ function MiniSidebar() {
         </ul>
 
         <div className="mb-[1.5rem]">
-          <button className="w-12 h-12 flex justify-center items-center border-2 border-[#5d207e]  p-2 rounded-full">
-            <IconDeleteAll strokeColor="#5d207e" />
+          <button className="w-12 h-12 flex justify-center items-center border-2 border-[#EB4E31]  p-2 rounded-full">
+            <IconDeleteAll strokeColor="#EB4E31" />
           </button>
         </div>
       </div>

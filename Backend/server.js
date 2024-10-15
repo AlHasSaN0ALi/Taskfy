@@ -12,17 +12,16 @@ const port = process.env.PORT || 8000;
 
 const app = express();
 
-
 // middleware
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: "http://localhost:3000",
     credentials: true,
   })
 );
+app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cookieParser());
 
 // error handler middleware
 app.use(errorHandler);

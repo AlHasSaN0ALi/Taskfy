@@ -235,7 +235,7 @@ export const verifyEmail = asyncHandler(async (req, res) => {
   }).save();
 
   // verification link
-  const verificationLink = `${process.env.CLIENT_URL}/verify-email/${verificationToken}`;
+  const verificationLink = `${process.env.CLIENT_URI}/verify-email/${verificationToken}`;
 
   // send email
   const subject = "Email Verification - AuthKit";
@@ -331,7 +331,7 @@ export const forgotPassword = asyncHandler(async (req, res) => {
   }).save();
 
   // reset link
-  const resetLink = `${process.env.CLIENT_URL}/reset-password/${passwordResetToken}`;
+  const resetLink = `${process.env.CLIENT_URI}/reset-password/${passwordResetToken}`;
 
   // send email to user
   const subject = "Password Reset - AuthKit";

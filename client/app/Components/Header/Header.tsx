@@ -17,7 +17,7 @@ function Header() {
   const userId = user._id;
 
   return (
-    <header className="px-6 my-4 w-full flex items-center justify-between bg-[#ac70fd]">
+    <header className="px-6 my-4 w-full flex items-center justify-between bg-[#d483ff]">
       <div>
         <h1 className="text-lg font-medium">
           <span role="img" aria-label="wave">
@@ -29,7 +29,7 @@ function Header() {
           {userId ? (
             <>
               You have{" "}
-              <span className="font-bold text-[#0246ff]">
+              <span className="font-bold text-[#3aafae]">
                 {activeTasks.length}
               </span>
               &nbsp;active tasks
@@ -41,8 +41,8 @@ function Header() {
       </div>
       <div className="h-[50px] flex items-center gap-[10.4rem]">
         <button
-          className="px-8 py-3 bg-[#4900c5] text-white rounded-[50px]
-          hover:bg-[#00A1F1] hover:text-white transition-all duration-200 ease-in-out"
+          className="px-8 py-3 bg-[#00A1F1] text-white rounded-[50px]
+          hover:bg-[#3aafae] hover:text-white transition-all duration-200 ease-in-out"
           onClick={() => {
             if (userId) {
               openModalForAdd();
@@ -60,7 +60,7 @@ function Header() {
             passHref
             target="_blank"
             rel="noopener noreferrer"
-            className="h-[40px] w-[40px] text-purple-500 rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6] bg-[#F5F5F5]"
+            className="h-[40px] w-[40px] text-purple-500 rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
           >
             {github}
           </Link>
@@ -68,9 +68,8 @@ function Header() {
             href="https://github.com/Maclinz/taskfyer"
             passHref
             target="_blank"
-            
             rel="noopener noreferrer"
-            className="h-[40px] w-[40px] text-purple-500 rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6] bg-[#F5F5F5]"
+            className="h-[40px] w-[40px] text-purple-500 rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
           >
             {moon}
           </Link>
@@ -79,7 +78,7 @@ function Header() {
             passHref
             target="_blank"
             rel="noopener noreferrer"
-            className="h-[40px] w-[40px] text-purple-500 rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6] bg-[#F5F5F5]"
+            className="h-[40px] w-[40px] text-purple-500 rounded-full flex items-center justify-center text-lg border-2 border-[#E6E6E6]"
           >
             {profile}
           </Link>
